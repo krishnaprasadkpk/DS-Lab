@@ -1,0 +1,33 @@
+#include<stdio.h>
+int lsearch(int a, int n, int num, int index)
+{
+ int pos=0;
+ if(index>=n)
+  return 0;
+ else if(a[index]== num){
+  pos = index+1;
+  return pos;
+  
+ } else
+     return lsearch(a,n,num,index+1)
+ return pos;    
+}
+int main()
+{
+int a[20];
+int n,num,i,found=0;
+printf("Enter number of elements: ");
+scanf("%d",&n);
+printf("Enter the elements: \n");
+for(i=0;i<n;i++)
+	scanf("%d",&a[i]);
+printf("Enter the element to be searched: \n");
+scanf("%d",&num);
+found=lsearch(a,n,num,0);
+}
+if(found==1)
+	printf("Element is Present\n");
+else
+	printf("Element is not found\n");
+return 0;
+}
